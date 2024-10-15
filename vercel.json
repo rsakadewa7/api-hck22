@@ -1,0 +1,15 @@
+{
+  "devCommand": "uvicorn test_api:dewa --host 0.0.0.0 --port 3000",
+  "builds": [
+    {
+      "src": "test_api.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "main.py"
+    }
+  ]
+}
